@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="3.7.9.55" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Feature.AWS.Storage\Feature.AWS.Storage.csproj" />
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Feature.BusinessModel\Feature.BusinessModel.csproj" />
+    <ProjectReference Include="..\Feature.DAL.Repositories\Feature.DAL.Repositories.csproj" />
+    <ProjectReference Include="..\Feature.Repositories.ADONET\Feature.ADONET.DAL.csproj" />
+    <ProjectReference Include="..\Feature.Repository.Interface\Feature.Repository.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

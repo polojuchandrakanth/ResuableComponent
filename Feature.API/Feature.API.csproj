@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+      <GenerateDocumentationFile>true</GenerateDocumentationFile>
+      <UserSecretsId>cef14f93-6d3c-48e0-9315-41ebfafc08ed</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="6.0.2" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="6.0.5" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.InMemory.Storage" Version="6.0.5" />
+    <PackageReference Include="AWS.Logger.NLog" Version="3.1.0" />
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.5.5" />
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.2" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.9.55" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="6.0.10" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="1.25.5" />
+    <PackageReference Include="Microsoft.Identity.Web.MicrosoftGraph" Version="1.25.5" />
+    <PackageReference Include="Microsoft.Identity.Web.UI" Version="1.25.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.15.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Feature.AWS.Storage\Feature.AWS.Storage.csproj" />
+    <ProjectReference Include="..\Feature.AzureAD\Feature.AzureAD.csproj" />
+    <ProjectReference Include="..\Feature.Entity\Feature.Entity.csproj" />
+    <ProjectReference Include="..\Feature.JWT\Feature.JWT.csproj" />
+    <ProjectReference Include="..\Feature.Mapper\Feature.Mapper.csproj" />
+    <ProjectReference Include="..\Feature.Repositories.ADONET\Feature.ADONET.DAL.csproj" />
+    <ProjectReference Include="..\Feature.Repository.CodeFirst\Feature.Repository.CodeFirst.csproj" />
+    <ProjectReference Include="..\Feature.Repository.Dapper\Feature.Repository.Dapper.csproj" />
+    <ProjectReference Include="..\Feature.Repository.DBFirst\Feature.Repository.DBFirst.csproj" />
+    <ProjectReference Include="..\Feature.Repository.Interface\Feature.Repository.Interface.csproj" />
+    <ProjectReference Include="..\Feature.Services\Feature.Services.csproj" />
+  </ItemGroup>
+  
+
+</Project>

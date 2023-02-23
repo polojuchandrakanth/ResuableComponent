@@ -1,0 +1,1 @@
+alter table userProfileTbl Add RefreshToken varchar(100);

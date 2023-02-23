@@ -1,0 +1,20 @@
+image: mcr.microsoft.com/dotnet/core/sdk:latest
+variables:
+  SOURCE_CODE_PATH: 'C:\Users\sraddha.chaganti\source\repos\qentelli.reusable.api\Feature.API'
+stages:
+  - build
+  - test 
+  
+build:
+    stage: build
+    only:
+      changes:
+        - "C:/Users/sraddha.chaganti/source/repos/qentelli.reusable.api"
+    script:
+        - echo "Build Job"
+test:
+  stage: test
+  script:
+    - echo "Test job"
+  dependencies:
+    - "build"
